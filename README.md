@@ -851,7 +851,23 @@ $ yarn add --dev @storybook/source-loader
 ```shell-session
 $ yarn add --dev @storybook/addon-knobs @storybook/addon-notes @storybook/addon-a11y @storybook/addon-essentials @storybook/source-loader
 ```
+下記のエラーが発生する場合は`style-loader`をインストールする。
 
+```shell-session
+Module not found: Error: Can't resolve 'style-loader' in
+```
+
+```shell-session
+$ yarn add --dev style-loader
+```
+
+その他
+
+```shell-session
+$ yarn add --dev ts-loader vue-template-compiler sass-resources-loader
+```
+
+v6.1までVue3の対応が無いっぽい。
 
 ### Storybookのコマンド設定
 
@@ -866,7 +882,7 @@ pasckage.jsonの`scripts`に下記の設定を追記する。
 
 ### Storybookの設定ファイルについて
 
-`/.storybookw`ディレクトリを作成し、下記のファイルを作成する。
+`/.storybook`ディレクトリを作成し、下記のファイルを作成する。
 
 - main.ts
 
