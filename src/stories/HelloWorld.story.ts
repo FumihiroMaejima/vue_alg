@@ -1,24 +1,24 @@
 // import { action } from '@storybook/addon-actions'
-import { text } from "@storybook/addon-knobs";
-import HelloWorld from "../components/HelloWorld.vue";
-import markdown from "./notes/sample.md";
+import { text } from '@storybook/addon-knobs'
+import HelloWorld from '../components/HelloWorld.vue'
+import markdown from './notes/sample.md'
 
 // コンポーネントのメタデータを記述
 export default {
-  title: "Test/HelloTest",
+  title: 'Test/HelloTest',
   parameters: {
-    layout: "centered",
+    layout: 'centered',
     docs: {
       extractComponentDescription: (component: any, { notes }: any) => {
         if (notes) {
-          return notes.markdown;
+          return notes.markdown
         }
-        return null;
+        return null
       }
     },
     notes: { markdown }
   }
-};
+}
 
 export const HelloTest = () => ({
   components: { HelloWorld },
@@ -30,11 +30,11 @@ export const HelloTest = () => ({
   props: {
     msg: {
       type: String,
-      default: text("msg", "default text")
+      default: text('msg', 'default text')
     }
   },
   data() {
-    return {};
+    return {}
   },
   methods: {}
-});
+})
