@@ -734,11 +734,13 @@ postcssの設定
 ```shell-session
 $ yarn add autoprefixer
 $ yarn add postcss-cli
+$ yarn add autoprefixer postcss-cli
 ```
 
 設定ファイル(postcss.config.js)の編集
 
 ```Javascript
+/* eslint-disable @typescript-eslint/no-var-requires */
 const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 

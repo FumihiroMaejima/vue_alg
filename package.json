@@ -13,9 +13,12 @@
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^4.5.4",
+    "autoprefixer": "^9.8.6",
     "axios": "^0.20.0",
     "axios-mock-server": "^0.19.0",
     "jest": "^26.4.2",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.7.6",
     "vue": "^3.0.0-0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
