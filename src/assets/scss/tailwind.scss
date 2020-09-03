@@ -1,3 +1,5 @@
 @tailwind base;
+/** メディアクエリを含んだクラス（.sm\:font-boldなど）が最初に来る **/
+// @tailwind screens;
 @tailwind components;
 @tailwind utilities;
