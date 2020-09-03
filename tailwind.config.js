@@ -6,6 +6,9 @@ module.exports = {
   purge: ['./src/**/*.ts', './src/**/*.tsx', './src/**/*.vue'],
   theme: {
     extend: {
+      colors: {
+        cyan: '#9cdbff'
+      },
       screens: {
         // xs:w-10で、480px幅以上で、w-10のスタイルが適用されるようになる
         // sxs: '480px'
