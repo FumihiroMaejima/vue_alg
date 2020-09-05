@@ -1,6 +1,21 @@
 <template>
-  <router-view />
+  <section>
+    <global-header />
+    <router-view />
+  </section>
 </template>
+
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component'
+import GlobalHeader from '@/components/_global/GlobalHeader.vue'
+
+@Options({
+  components: {
+    GlobalHeader
+  }
+})
+export default class App extends Vue {}
+</script>
 
 <style lang="scss" scoped>
 #app {

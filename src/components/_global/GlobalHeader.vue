@@ -2,7 +2,7 @@
   <div class="bg-blue-500 lg:bg-green-500">
     <header class="container mx-auto text-white">
       <div class="flex justify-between items-center">
-        <h1 class="text-4xl font-semibold md:text-xl">Header</h1>
+        <h1 class="text-4xl font-semibold md:text-xl">{{ header }}</h1>
         <div class="md:hidden">
           <button @click="isOpen = !isOpen">
             <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -58,14 +58,14 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
+import { headerName } from '@/config/index.json'
 
 @Options({
-  components: {
-    // HelloWorld
-  }
+  components: {}
 })
-export default class Test2 extends Vue {
+export default class GlobalHeader extends Vue {
   // data
+  private header = headerName
   private isOpen = false
 }
 </script>
