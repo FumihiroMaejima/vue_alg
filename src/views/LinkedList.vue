@@ -1,27 +1,30 @@
 <template>
   <div class="container mx-auto">
     <h1>アルゴリズム描画</h1>
-    <p>アルゴリズム描画</p>
-
-    <h2>配列1</h2>
-    <ul v-for="(item, key) in arr1" :key="key">
-      <li>{{ item }}</li>
-    </ul>
-
-    <h2>配列2</h2>
-    <ul v-for="(item, key) in arr2" :key="key">
-      <li>{{ item }}</li>
-    </ul>
 
     <h2>computed配列</h2>
     <ul v-for="(item, key) in arr3" :key="key">
       <li>{{ item }}</li>
     </ul>
 
-    <h2>プラグイン配列</h2>
-    <ul v-for="(item, key) in arr4" :key="key">
-      <li>{{ item.value }}</li>
-    </ul>
+    <div>
+      <h2
+        class="sticky top-0 z-10 block px-4 py-2 bg-green-400 text-white rounded"
+      >
+        リンクリスト
+      </h2>
+      <ul class="mx-6" v-for="(item, key) in arr4" :key="key">
+        <li
+          class="relative my-1 bg-blue-400 border-solid border-2 border-gray-600 rounded h-8 w-8 flex items-center justify-center text-white"
+        >
+          {{ item.value }}
+          <span
+            class="absolute bottom-0 right-0 bg-orange-400 rounded-full h-2 w-2 flex items-center justify-center"
+          >
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -64,17 +67,20 @@ export default class LinkedList extends Vue {
     this.listPlugin.append(100)
 
     // 配列の格納
-    for (let i = 0; i < this.arr1.length; i++) {
-      this.listPlugin.append(this.arr1[i])
+    for (let i = 0; i <= 100; i++) {
+      this.listPlugin.append(i)
     }
+
     // 配列化
     this.listPlugin.toArray()
     console.log('toArray: ' + this.listPlugin.toArray())
 
+    // リストからの検索
     const test = this.listPlugin.find({
       value: 1,
       callback: this.linkedListCallback(55)
     })
+    // リストからの検索結果
     console.log('created: ' + test)
   }
 
