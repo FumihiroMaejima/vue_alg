@@ -1,6 +1,10 @@
 import LinkedListNode from './LinkedListNode'
 import Comparator from '@/util/Comparator'
-import { LinkedListConst, LinkedListCallBack, LinkedListFindParam } from '@/types'
+import {
+  LinkedListConst,
+  LinkedListCallBack,
+  LinkedListFindParam
+} from '@/types'
 
 export default class LinkedList {
   private head: LinkedListNode | null
@@ -31,7 +35,7 @@ export default class LinkedList {
       this.tail = newNode
     }
 
-    return this;
+    return this
   }
 
   /**
@@ -53,6 +57,8 @@ export default class LinkedList {
       this.tail.next = newNode
       this.tail = newNode
     }
+    console.log('append head: ' + JSON.stringify(this.head))
+    console.log('append tail: ' + JSON.stringify(this.tail))
 
     return this
   }
@@ -63,7 +69,7 @@ export default class LinkedList {
    */
   delete(value: any) {
     if (!this.head) {
-      return null;
+      return null
     }
 
     let deletedNode = null
@@ -104,6 +110,7 @@ export default class LinkedList {
    */
   find(params: LinkedListFindParam) {
     if (!this.head) {
+      console.log('find1: ')
       return null
     }
 
@@ -116,13 +123,16 @@ export default class LinkedList {
       }
 
       // If value is specified then try to compare by value..
-      if (params.value !== undefined && this.compare.equal(currentNode.value, params.value)) {
+      if (
+        params.value !== undefined &&
+        this.compare.equal(currentNode.value, params.value)
+      ) {
         return currentNode
       }
 
       currentNode = currentNode.next
     }
-
+    console.log('find3: ')
     return null
   }
 
@@ -146,16 +156,16 @@ export default class LinkedList {
 
       while (currentNode.next) {
         if (!currentNode.next.next) {
-          currentNode.next = null;
+          currentNode.next = null
         } else {
-          currentNode = currentNode.next;
+          currentNode = currentNode.next
         }
       }
 
-      this.tail = currentNode;
+      this.tail = currentNode
     }
 
-    return deletedTail;
+    return deletedTail
   }
 
   /**
@@ -163,19 +173,19 @@ export default class LinkedList {
    */
   deleteHead() {
     if (!this.head) {
-      return null;
+      return null
     }
 
-    const deletedHead = this.head;
+    const deletedHead = this.head
 
     if (this.head.next) {
-      this.head = this.head.next;
+      this.head = this.head.next
     } else {
-      this.head = null;
-      this.tail = null;
+      this.head = null
+      this.tail = null
     }
 
-    return deletedHead;
+    return deletedHead
   }
 
   /**
@@ -183,7 +193,7 @@ export default class LinkedList {
    * @return LinkedList
    */
   fromArray(values: any[]) {
-    values.forEach((value) => this.append(value));
+    values.forEach((value) => this.append(value))
 
     return this
   }
@@ -208,7 +218,9 @@ export default class LinkedList {
    * @return string
    */
   toString(callback: LinkedListCallBack) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString()
   }
 
   /**
