@@ -11,6 +11,67 @@
       <h2
         class="sticky top-0 z-10 block px-4 py-2 bg-green-400 text-white rounded"
       >
+        カード
+      </h2>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">カードヘッダー</div>
+          <p class="text-gray-700 text-base">
+            カードコンテンツ カードコンテンツ カードコンテンツ カードコンテンツ
+            カードコンテンツ
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          >
+            #photography
+          </span>
+          <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          >
+            #travel
+          </span>
+          <span
+            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          >
+            #winter
+          </span>
+        </div>
+      </div>
+      <div class="flex my-4">
+        <div class="flex-1 bg-gray-100"></div>
+        <div class="flex-1 bg-gray-100">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">カードヘッダー</div>
+              <p class="text-gray-700 text-base">
+                カードコンテンツ カードコンテンツ カードコンテンツ カードコンテンツ
+                カードコンテンツ
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span
+                v-for="(item, key) in arr4" :key="key"
+                class="static inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              >
+                {{ item.value }}
+                <span
+                  class="absolute bottom-10 right-20 bg-orange-400 w-8 rounded-full py-1 px-4 flex items-center justify-center"
+                >
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 bg-gray-100"></div>
+      </div>
+    </div>
+
+    <div>
+      <h2
+        class="sticky top-0 z-10 block px-4 py-2 bg-green-400 text-white rounded"
+      >
         リンクリスト
       </h2>
       <ul class="mx-6" v-for="(item, key) in arr4" :key="key">
@@ -19,7 +80,7 @@
         >
           {{ item.value }}
           <span
-            class="absolute bottom-0 right-0 bg-orange-400 rounded-full h-2 w-2 flex items-center justify-center"
+            class="absolute bottom-0 left-0 bg-orange-400 rounded-full py-1 px-4 flex items-center justify-center"
           >
           </span>
         </li>
