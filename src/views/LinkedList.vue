@@ -46,13 +46,14 @@
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">カードヘッダー</div>
               <p class="text-gray-700 text-base">
-                カードコンテンツ カードコンテンツ カードコンテンツ カードコンテンツ
-                カードコンテンツ
+                カードコンテンツ カードコンテンツ カードコンテンツ
+                カードコンテンツ カードコンテンツ
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
               <span
-                v-for="(item, key) in arr4" :key="key"
+                v-for="(item, key) in arr4"
+                :key="key"
                 class="static inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
               >
                 {{ item.value }}
