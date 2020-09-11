@@ -1,6 +1,8 @@
-# pixi-demo
+# algorithm-demo
 
-my algorithm practice by vue.js.
+my algorithm practice by vue.js(TypeScript).
+
+参考元：[trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 
 ---
 
