@@ -97,7 +97,7 @@ export default class DoubleLinkedList {
           if (this.tail !== null) {
             this.tail.next = null
           }
-        } else  {
+        } else {
           const previousNode = deletedNode.previous
           const nextNode = deletedNode.next
 

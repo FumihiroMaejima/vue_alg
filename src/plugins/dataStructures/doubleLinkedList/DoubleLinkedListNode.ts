@@ -1,4 +1,7 @@
-import { DoubleLinkedListNodeConst, DoubleLinkedListNodeCallBack } from '@/types'
+import {
+  DoubleLinkedListNodeConst,
+  DoubleLinkedListNodeCallBack
+} from '@/types'
 
 export default class DoubleLinkedListNode {
   public value: any
@@ -21,9 +24,9 @@ export default class DoubleLinkedListNode {
   }
 
   /**
-  * @param callback: DoubleLinkedListNodeCallBack
-  * @return DoubleLinkedListNodeCallBack | DoubleLinkedListNodeCallBack['value']
-  */
+   * @param callback: DoubleLinkedListNodeCallBack
+   * @return DoubleLinkedListNodeCallBack | DoubleLinkedListNodeCallBack['value']
+   */
   toString(callback: DoubleLinkedListNodeCallBack) {
     return callback ? callback(this.value) : `${this.value}`
   }

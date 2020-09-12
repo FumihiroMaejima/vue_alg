@@ -3,6 +3,7 @@ import Arg from '../views/Arg.vue'
 import Test1 from '../views/Test1.vue'
 import Test2 from '../views/Test2.vue'
 import LinkedList from '../views/LinkedList.vue'
+import DoubleLinkedList from '../views/DoubleLinkedList.vue'
 // import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -25,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/list',
     name: 'LinkedList',
     component: LinkedList
+  },
+  {
+    path: '/doublelist',
+    name: 'DoubleLinkedList',
+    component: DoubleLinkedList
   }
 ]
 
