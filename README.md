@@ -1,6 +1,8 @@
-# pixi-demo
+# algorithm-demo
 
-my algorithm practice by vue.js.
+my algorithm practice by vue.js(TypeScript).
+
+参考元：[trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 
 ---
 
@@ -734,11 +736,13 @@ postcssの設定
 ```shell-session
 $ yarn add autoprefixer
 $ yarn add postcss-cli
+$ yarn add autoprefixer postcss-cli
 ```
 
 設定ファイル(postcss.config.js)の編集
 
 ```Javascript
+/* eslint-disable @typescript-eslint/no-var-requires */
 const tailwindcss = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 
@@ -851,7 +855,23 @@ $ yarn add --dev @storybook/source-loader
 ```shell-session
 $ yarn add --dev @storybook/addon-knobs @storybook/addon-notes @storybook/addon-a11y @storybook/addon-essentials @storybook/source-loader
 ```
+下記のエラーが発生する場合は`style-loader`をインストールする。
 
+```shell-session
+Module not found: Error: Can't resolve 'style-loader' in
+```
+
+```shell-session
+$ yarn add --dev style-loader
+```
+
+その他
+
+```shell-session
+$ yarn add --dev ts-loader vue-template-compiler sass-resources-loader
+```
+
+v6.1までVue3の対応が無いっぽい。
 
 ### Storybookのコマンド設定
 
@@ -866,7 +886,7 @@ pasckage.jsonの`scripts`に下記の設定を追記する。
 
 ### Storybookの設定ファイルについて
 
-`/.storybookw`ディレクトリを作成し、下記のファイルを作成する。
+`/.storybook`ディレクトリを作成し、下記のファイルを作成する。
 
 - main.ts
 

@@ -7,14 +7,18 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 9100",
     "mock:build": "axios-mock-server -b",
     "mock:watch": "axios-mock-server -w"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^4.5.4",
+    "autoprefixer": "^9.8.6",
     "axios": "^0.20.0",
     "axios-mock-server": "^0.19.0",
     "jest": "^26.4.2",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.7.6",
     "vue": "^3.0.0-0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
@@ -22,6 +26,12 @@
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-knobs": "^6.0.21",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/source-loader": "^6.0.21",
+    "@storybook/vue": "^6.0.21",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
@@ -45,7 +55,10 @@
     "prettier": "^1.19.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "sass-resources-loader": "^2.1.0",
+    "style-loader": "^1.2.1",
     "stylelint": "^13.7.0",
+    "ts-loader": "^8.0.3",
     "typescript": "~3.9.3",
     "vue-jest": "^3.0.6"
   },
