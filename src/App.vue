@@ -1,14 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <section>
+    <global-header />
     <router-view />
-  </div>
+  </section>
 </template>
 
-<style lang="scss">
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component'
+import GlobalHeader from '@/components/_global/GlobalHeader.vue'
+
+@Options({
+  components: {
+    GlobalHeader
+  }
+})
+export default class App extends Vue {}
+</script>
+
+<style lang="scss" scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
