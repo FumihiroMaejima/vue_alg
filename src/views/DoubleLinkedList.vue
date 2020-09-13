@@ -24,6 +24,18 @@
         >
           prepend
         </button>
+        <button
+          class="mx-2  px-2 bg-orange-500 font-semibold text-white rounded hover:bg-orange-400 border-b-2 border-orange-700 hover:border-orange-500 focus:outline-none custom-buttom"
+          @click="onDelete"
+        >
+          delete
+        </button>
+        <button
+          class="mx-2  px-2 bg-orange-500 font-semibold text-white rounded hover:bg-orange-400 border-b-2 border-orange-700 hover:border-orange-500 focus:outline-none custom-buttom"
+          @click="onReverse"
+        >
+          reverse
+        </button>
       </h2>
       <div class="flex my-4">
         <div class="flex-1 bg-gray-100"></div>
@@ -59,7 +71,7 @@
       <h2
         class="sticky top-0 z-10 block px-4 py-2 bg-green-400 text-white rounded"
       >
-        リンクリスト
+        双方向リンクリスト
       </h2>
       <ul class="mx-6" v-for="(item, key) in arr4" :key="key">
         <li
@@ -111,9 +123,6 @@ export default class DoubleLinkedList extends Vue {
       this.linkedListFunc(this.arr1, this.arr2)
     )
 
-    this.listPlugin.prepend(55)
-    this.listPlugin.append(100)
-
     // 配列の格納
     for (let i = 0; i <= 100; i++) {
       this.listPlugin.append(i)
@@ -152,6 +161,19 @@ export default class DoubleLinkedList extends Vue {
     if (this.listPlugin) {
       const index = this.listPlugin.toArray().length
       this.listPlugin.prepend(index)
+    }
+  }
+
+  onDelete(): void {
+    if (this.listPlugin) {
+      const index = this.listPlugin.toArray().length
+      this.listPlugin.delete(index - 1)
+    }
+  }
+
+  onReverse(): void {
+    if (this.listPlugin) {
+      this.listPlugin.reverse()
     }
   }
 }
